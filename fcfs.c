@@ -38,12 +38,9 @@ int main()
       }
      }
     }
-    /* calculating 1st ct */
     ct[0]=at[0]+bt[0];
-    /* calculating 2 to n ct */
     for(i=1;i<n;i++)
     {  
-      //when proess is ideal in between i and i+1
       temp=0;
      if(ct[i-1]<at[i])
      {
@@ -51,7 +48,6 @@ int main()
      }
      ct[i]=ct[i-1]+bt[i]+temp;
     }
-    /* calculating tat and wt */
     printf("\np\t A.T\t B.T\t C.T\t TAT\t WT");
     for(i=0;i<n;i++)
     {
@@ -67,7 +63,6 @@ int main()
       printf("\nP%d\t %d\t %d\t %d \t %d \t %d",p[i],at[i],bt[i],ct[i],tat[i],wt[i]);
     }
     printf("\naverage turnaround time is %f",atat);
-
     printf("\naverage wating timme is %f",awt);
     return 0;
 }
